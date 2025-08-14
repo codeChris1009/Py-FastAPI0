@@ -31,6 +31,7 @@ def welcome_message():
     week = today.strftime("%A")
     return {"welcomeMessage": f"{week}, Happy Book, Code, Cookie With Padi~"}
 
+# ================================================================================================================
 
 # Create Post
 
@@ -48,6 +49,8 @@ def create_books(books: List[Book]):
         book.id = uuid4()
         bookshelf.append(book)
     return books
+
+# ================================================================================================================
 
 # Read Books
 
@@ -81,6 +84,53 @@ def read_booksByAuthor(author: str):
     if matched_books:
         return matched_books
     raise HTTPException(status_code=404, detail=f"Book not found, please check the Author：{author}")
+
+# ================================================================================================================
+
+# Update Book
+
+# Update a book With Demo Vid
+@app.put("/bookshelf/{book_id}", response_model=Book)
+def update_book_put(book_id: UUID, updated_book: Book):
+    for index, book in enumerate(bookshelf):
+        if book.id == book_id:
+            bookshelf[index] = updated_book
+            return updated_book
+    raise HTTPException(status_code=404, detail=f"Book not found, please check the ID：{book_id}")
+
+# Update a book By ISBN Use PUT
+# PUT Will Completely Replace the Book CREATE OR UPDATE, ISBN would be unique Prime Key for Book
+@app.put("/bookshelf/{isbn}", response_model=Book)
+def update_book_put_ISBN(isbn: str, updated_book: Book):
+    matched_indices = [i for i, book in enumerate(bookshelf) if book.isbn == isbn]
+    if len(matched_indices) > 1:
+        raise HTTPException(status_code=400, detail=f"Multiple books found with the same ISBN: {isbn}. Update aborted.")
+    if len(matched_indices) == 1:
+        index = matched_indices[0]
+        updated_book.id = bookshelf[index].id
+        bookshelf[index] = updated_book
+        return updated_book
+    raise HTTPException(status_code=404, detail=f"Book not found, please check the ISBN：{isbn}")
+
+# Update a book By Title Use PATCH
+@app.patch("/bookshelf/title/{title}", response_model=Book)
+def update_book_patch_title(title: str, updated_book: Book):
+    for index, book in enumerate(bookshelf):
+        if book.title == title:
+            bookshelf[index] = updated_book
+            return updated_book
+    raise HTTPException(status_code=404, detail=f"Book not found, please check the Title：{title}")
+
+# ================================================================================================================
+
+# Delete Book
+
+@app.delete("/bookshelf/{book_id}", response_model=Book)
+def delete_book(book_id: UUID):
+    for index, book in enumerate(bookshelf):
+        if book.id == book_id:
+            return bookshelf.pop(index)
+    raise HTTPException(status_code=404, detail=f"Book not found, please check the ID：{book_id}")
 
 if __name__ == "__main__":
     import uvicorn

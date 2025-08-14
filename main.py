@@ -94,13 +94,15 @@ def read_booksByAuthor(author: str):
 def update_book_put(book_id: UUID, updated_book: Book):
     for index, book in enumerate(bookshelf):
         if book.id == book_id:
+            updated_book.id = book.id
             bookshelf[index] = updated_book
             return updated_book
     raise HTTPException(status_code=404, detail=f"Book not found, please check the ID：{book_id}")
 
 # Update a book By ISBN Use PUT
 # PUT Will Completely Replace the Book CREATE OR UPDATE, ISBN would be unique Prime Key for Book
-@app.put("/bookshelf/{isbn}", response_model=Book)
+
+@app.put("/bookshelf/isbn/{isbn}", response_model=Book)
 def update_book_put_ISBN(isbn: str, updated_book: Book):
     matched_indices = [i for i, book in enumerate(bookshelf) if book.isbn == isbn]
     if len(matched_indices) > 1:
@@ -117,6 +119,7 @@ def update_book_put_ISBN(isbn: str, updated_book: Book):
 def update_book_patch_title(title: str, updated_book: Book):
     for index, book in enumerate(bookshelf):
         if book.title == title:
+            updated_book.id = book.id
             bookshelf[index] = updated_book
             return updated_book
     raise HTTPException(status_code=404, detail=f"Book not found, please check the Title：{title}")
@@ -131,6 +134,9 @@ def delete_book(book_id: UUID):
         if book.id == book_id:
             return bookshelf.pop(index)
     raise HTTPException(status_code=404, detail=f"Book not found, please check the ID：{book_id}")
+
+# ================================================================================================================
+
 
 if __name__ == "__main__":
     import uvicorn

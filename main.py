@@ -33,11 +33,21 @@ def welcome_message():
 
 
 # Create Post
+
+# Create a new book
 @app.post("/bookshelf", response_model=Book)
 def create_book(book: Book):
     book.id = uuid4()
     bookshelf.append(book)
     return book
+
+# Create a lots of books
+@app.post("/bookshelf/bulk", response_model=List[Book])
+def create_books(books: List[Book]):
+    for book in books:
+        book.id = uuid4()
+        bookshelf.append(book)
+    return books
 
 # Read Books
 

@@ -1,0 +1,387 @@
+{
+  "mockBooks": [
+    {
+      "isbn": "9780141439600",
+      "author": "Jane Austen",
+      "title": "Pride and Prejudice",
+      "lang": "en",
+      "isRead": true,
+      "reflection": { "rate_star": 5, "desc": "A witty and romantic classic." }
+    },
+    {
+      "isbn": "9780140449136",
+      "author": "Charles Dickens",
+      "title": "Great Expectations",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "A tale of growth and redemption."
+      }
+    },
+    {
+      "isbn": "9780141439518",
+      "author": "Emily Brontë",
+      "title": "Wuthering Heights",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9780141199078",
+      "author": "F. Scott Fitzgerald",
+      "title": "The Great Gatsby",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "A tragic story of the American dream."
+      }
+    },
+    {
+      "isbn": "9780141439556",
+      "author": "Charlotte Brontë",
+      "title": "Jane Eyre",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "A strong heroine and a moving plot."
+      }
+    },
+    {
+      "isbn": "9780140449266",
+      "author": "George Orwell",
+      "title": "1984",
+      "lang": "en",
+      "isRead": true,
+      "reflection": { "rate_star": 5, "desc": "A chilling dystopian vision." }
+    },
+    {
+      "isbn": "9780140449181",
+      "author": "Mary Shelley",
+      "title": "Frankenstein",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9780140449273",
+      "author": "William Shakespeare",
+      "title": "Hamlet",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Timeless tragedy and philosophy."
+      }
+    },
+    {
+      "isbn": "9780140449198",
+      "author": "Oscar Wilde",
+      "title": "The Picture of Dorian Gray",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9780140449204",
+      "author": "Mark Twain",
+      "title": "Adventures of Huckleberry Finn",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "A journey of freedom and friendship."
+      }
+    },
+    {
+      "isbn": "9780140449211",
+      "author": "Herman Melville",
+      "title": "Moby-Dick",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9780140449228",
+      "author": "Virginia Woolf",
+      "title": "To the Lighthouse",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 3,
+        "desc": "A poetic exploration of time and memory."
+      }
+    },
+    {
+      "isbn": "9780140449235",
+      "author": "James Joyce",
+      "title": "Ulysses",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9780140449242",
+      "author": "Lewis Carroll",
+      "title": "Alice's Adventures in Wonderland",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "A whimsical and imaginative journey."
+      }
+    },
+    {
+      "isbn": "9780140449259",
+      "author": "J.R.R. Tolkien",
+      "title": "The Hobbit",
+      "lang": "en",
+      "isRead": true,
+      "reflection": { "rate_star": 5, "desc": "A classic fantasy adventure." }
+    },
+    {
+      "isbn": "9780140449280",
+      "author": "Harper Lee",
+      "title": "To Kill a Mockingbird",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "A powerful story of justice and empathy."
+      }
+    },
+    {
+      "isbn": "9780140449297",
+      "author": "Arthur Conan Doyle",
+      "title": "The Adventures of Sherlock Holmes",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9780140449303",
+      "author": "Bram Stoker",
+      "title": "Dracula",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9780140449310",
+      "author": "George Eliot",
+      "title": "Middlemarch",
+      "lang": "en",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "A rich portrait of English society."
+      }
+    },
+    {
+      "isbn": "9780140449327",
+      "author": "D.H. Lawrence",
+      "title": "Sons and Lovers",
+      "lang": "en",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9782070360024",
+      "author": "Marcel Proust",
+      "title": "À la recherche du temps perdu",
+      "lang": "fr",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "Un chef-d'œuvre de la mémoire et du temps."
+      }
+    },
+    {
+      "isbn": "9782253006329",
+      "author": "Albert Camus",
+      "title": "L'Étranger",
+      "lang": "fr",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9782070360536",
+      "author": "Gustave Flaubert",
+      "title": "Madame Bovary",
+      "lang": "fr",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Un portrait poignant de la société provinciale."
+      }
+    },
+    {
+      "isbn": "9782070368228",
+      "author": "Victor Hugo",
+      "title": "Les Misérables",
+      "lang": "fr",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "Une épopée de justice et de rédemption."
+      }
+    },
+    {
+      "isbn": "9782070363698",
+      "author": "Stendhal",
+      "title": "Le Rouge et le Noir",
+      "lang": "fr",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9782070368709",
+      "author": "Antoine de Saint-Exupéry",
+      "title": "Le Petit Prince",
+      "lang": "fr",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "Un conte poétique sur l'enfance et l'amitié."
+      }
+    },
+    {
+      "isbn": "9782070367740",
+      "author": "Émile Zola",
+      "title": "Germinal",
+      "lang": "fr",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9782070363699",
+      "author": "Honoré de Balzac",
+      "title": "Le Père Goriot",
+      "lang": "fr",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Une analyse profonde de la société parisienne."
+      }
+    },
+    {
+      "isbn": "9782070363690",
+      "author": "Jules Verne",
+      "title": "Vingt mille lieues sous les mers",
+      "lang": "fr",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9782070363691",
+      "author": "Molière",
+      "title": "Le Misanthrope",
+      "lang": "fr",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Une comédie intemporelle sur la nature humaine."
+      }
+    },
+    {
+      "isbn": "9783518368544",
+      "author": "Johann Wolfgang von Goethe",
+      "title": "Faust",
+      "lang": "de",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "Ein Klassiker über Streben und Versuchung."
+      }
+    },
+    {
+      "isbn": "9783423108766",
+      "author": "Franz Kafka",
+      "title": "Die Verwandlung",
+      "lang": "de",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9783596905732",
+      "author": "Thomas Mann",
+      "title": "Der Zauberberg",
+      "lang": "de",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Ein tiefgründiger Roman über Zeit und Krankheit."
+      }
+    },
+    {
+      "isbn": "9783150000014",
+      "author": "Hermann Hesse",
+      "title": "Siddhartha",
+      "lang": "de",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 5,
+        "desc": "Eine spirituelle Reise zur Selbstfindung."
+      }
+    },
+    {
+      "isbn": "9783257200011",
+      "author": "Friedrich Dürrenmatt",
+      "title": "Der Besuch der alten Dame",
+      "lang": "de",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9783499101804",
+      "author": "Patrick Süskind",
+      "title": "Das Parfum",
+      "lang": "de",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Ein faszinierender Roman über Geruch und Obsession."
+      }
+    },
+    {
+      "isbn": "9783423130002",
+      "author": "Heinrich Böll",
+      "title": "Die verlorene Ehre der Katharina Blum",
+      "lang": "de",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9783150000021",
+      "author": "Bertolt Brecht",
+      "title": "Mutter Courage und ihre Kinder",
+      "lang": "de",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Ein bedeutendes Werk des epischen Theaters."
+      }
+    },
+    {
+      "isbn": "9783150000038",
+      "author": "E.T.A. Hoffmann",
+      "title": "Der Sandmann",
+      "lang": "de",
+      "isRead": false,
+      "reflection": null
+    },
+    {
+      "isbn": "9783150000045",
+      "author": "Theodor Fontane",
+      "title": "Effi Briest",
+      "lang": "de",
+      "isRead": true,
+      "reflection": {
+        "rate_star": 4,
+        "desc": "Ein bewegendes Porträt der preußischen Gesellschaft."
+      }
+    }
+  ]
+}

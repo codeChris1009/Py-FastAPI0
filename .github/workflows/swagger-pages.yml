@@ -1,0 +1,41 @@
+name: Deploy Swagger UI to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install fastapi uvicorn
+
+      - name: Start FastAPI app in background
+        run: |
+          uvicorn main:app --host 127.0.0.1 --port 8000 &
+          sleep 5
+
+      - name: Download openapi.json
+        run: |
+          curl http://127.0.0.1:8000/openapi.json -o swagger-static/openapi.json
+
+      - name: Deploy Swagger UI static to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./swagger-static
